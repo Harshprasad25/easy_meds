@@ -1,5 +1,5 @@
-<?php include('includes\header.php'); ?>
-<?php include('includes\conn.php'); ?>
+<?php include('<includes/header.php'); ?>
+<?php include('includes/conn.php'); ?>
 
 <!-- INSERT FOR PATIENTS   -->
 <?php
@@ -7,11 +7,23 @@ if (isset($_POST['patient_submit'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $cpassword = $_POST['cpassword'];
     $gender = $_POST['gender'];
     $age = $_POST['age'];
     $contact = $_POST['contact'];
     $address = $_POST['address'];
 
+    if ($password !== $cpassword) {
+        echo "<script>alert('password do not match !'); window.location='registration.php';</script>";
+        exit;
+    }
+    $query = "SELECT * FROM patients WHERE email = '$email'";
+    $result = mysqli_query($conn, $query);
+
+    if (mysqli_num_rows($result) > 0) {
+        echo "<script>alert('This email is already registered!'); window.location='registration.php';</script>";
+        exit;
+    }
     $query = "INSERT INTO patients (name,email,password,gender, age,contact,address)
             values('$name','$email','$password','$gender','$age','$contact','$address')";
     $result = mysqli_query($conn, $query);
@@ -30,9 +42,13 @@ if (isset($_POST['doctor_submit'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $cpassword = $_POST['cpassword'];
     $specialization = $_POST['specialization'];
     $contact = $_POST['contact'];
     $availability = $_POST['availability'];
+
+
+
 
     $query = "INSERT INTO doctors (name,email,password, specialization,contact,availability)
             values('$name','$email','$password','$specialization','$contact','$availability')";
@@ -48,10 +64,11 @@ if (isset($_POST['doctor_submit'])) {
 ?>
 <!-- INSERT FOR ADMIN  -->
 <?php
-if (isset($_POST['doctor_submit'])) {
+if (isset($_POST['admin_submit'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $cpassword = $_POST['cpassword'];
     $role = $_POST['role'];
 
 
@@ -66,13 +83,8 @@ if (isset($_POST['doctor_submit'])) {
     }
 }
 
+
 ?>
-
-
-
-
-
-
 
 <main class="min-vh-100 d-flex my-5 align-items-center">
     <div class="container">
@@ -267,4 +279,4 @@ if (isset($_POST['doctor_submit'])) {
     </div>
 </main>
 
-<?php include('includes\footer.php'); ?>
+<?php include('includes/footer.php'); ?>cl
