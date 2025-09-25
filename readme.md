@@ -1,1 +1,1 @@
-# this is my project : easy meds 
+# This is my project : Easy Meds
