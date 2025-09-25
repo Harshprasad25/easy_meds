@@ -3,7 +3,7 @@
 
 <!-- INSERT FOR PATIENTS   -->
 <?php
-if (isset($_POST['#'])) {
+if (isset($_POST['patient_submit'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -26,7 +26,7 @@ if (isset($_POST['#'])) {
 ?>
 <!-- INSERT FOR DOCTORS   -->
 <?php
-if (isset($_POST['#'])) {
+if (isset($_POST['doctor_submit'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -48,7 +48,7 @@ if (isset($_POST['#'])) {
 ?>
 <!-- INSERT FOR ADMIN  -->
 <?php
-if (isset($_POST['#'])) {
+if (isset($_POST['doctor_submit'])) {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -179,7 +179,7 @@ if (isset($_POST['#'])) {
                                         <input type="text" class="form-control" id="patientAddress" name="address" placeholder="Enter your address">
                                     </div>
                                     <div>
-                                        <input type="submit" name="#" class="form-control bg-primary mt-2 text-white" value="Register as Patient">
+                                        <input type="submit" name="patient_submit" class="form-control bg-primary mt-2 text-white" value="Register as Patient">
                                     </div>
                                 </form>
                             </div>
@@ -218,7 +218,7 @@ if (isset($_POST['#'])) {
                                         <input type="text" class="form-control" id="doctorAvailability" name="availability" placeholder="Enter your availability">
                                     </div>
                                     <div>
-                                        <input type="submit" name="#" class="form-control bg-success mt-2 text-white" value="Register as Doctor">
+                                        <input type="submit" name="doctor_submit" class="form-control bg-success mt-2 text-white" value="Register as Doctor">
                                     </div>
                                 </form>
                             </div>
@@ -249,7 +249,7 @@ if (isset($_POST['#'])) {
                                         <input type="text" class="form-control" id="role" name="role" value="admin" readonly>
                                     </div>
                                     <div>
-                                        <input type="submit" name="#" class="form-control bg-warning mt-2 text-white" value="Register as Admin">
+                                        <input type="submit" name="admin_submit" class="form-control bg-warning mt-2 text-white" value="Register as Admin">
                                     </div>
                                 </form>
                             </div>
