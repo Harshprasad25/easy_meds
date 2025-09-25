@@ -136,23 +136,23 @@ if (isset($_POST['#'])) {
                             <div class="tab-pane fade show active" id="pills-patient" role="tabpanel" aria-labelledby="tab-patient">
                                 <form action="#" method="post">
                                     <div class="mb-3">
-                                        <label for="patientName" class="form-label">Full Name</label>
+                                        <label for="patientName" class="form-label">Full Name <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="patientName" name="name" placeholder="Enter your full name" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="patientEmail" class="form-label">Email</label>
+                                        <label for="patientEmail" class="form-label">Email <span class="text-danger">*</span></label>
                                         <input type="email" class="form-control" id="patientEmail" name="email" placeholder="Enter your email" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="patientPassword" class="form-label">Password</label>
+                                        <label for="patientPassword" class="form-label">Password <span class="text-danger">*</span></label>
                                         <input type="password" class="form-control" id="patientPassword" name="password" placeholder="Enter your password" minlength="6" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="patientCPassword" class="form-label">Confirm Password</label>
+                                        <label for="patientCPassword" class="form-label">Confirm Password <span class="text-danger">*</span></label>
                                         <input type="password" class="form-control" id="patientCPassword" name="cpassword" placeholder="Re-enter your password" minlength="6" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="form-label me-3">Gender:</label>
+                                        <label class="form-label me-3">Gender: <span class="text-danger">*</span></label>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="gender" id="patientMale" value="male" required>
                                             <label class="form-check-label" for="patientMale">Male</label>
@@ -167,15 +167,15 @@ if (isset($_POST['#'])) {
                                         </div>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="patientAge" class="form-label">Age</label>
+                                        <label for="patientAge" class="form-label">Age <span class="text-danger">*</span></label>
                                         <input type="number" class="form-control" id="patientAge" name="age" placeholder="Enter your age" min="1">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="patientContact" class="form-label">Contact Number</label>
+                                        <label for="patientContact" class="form-label">Contact Number <span class="text-danger">*</span></label>
                                         <input type="tel" class="form-control" id="patientContact" name="contact" placeholder="Enter your contact number" pattern="\d{10}">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="patientAddress" class="form-label">Address</label>
+                                        <label for="patientAddress" class="form-label">Address <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="patientAddress" name="address" placeholder="Enter your address">
                                     </div>
                                     <div>
@@ -189,32 +189,32 @@ if (isset($_POST['#'])) {
                             <div class="tab-pane fade" id="pills-doctor" role="tabpanel" aria-labelledby="tab-doctor">
                                 <form action="#" method="post">
                                     <div class="mb-3">
-                                        <label for="doctorName" class="form-label">Full Name</label>
+                                        <label for="doctorName" class="form-label">Full Name <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="doctorName" name="name" placeholder="Enter your full name" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="doctorEmail" class="form-label">Email</label>
+                                        <label for="doctorEmail" class="form-label">Email <span class="text-danger">*</span></label>
                                         <input type="email" class="form-control" id="doctorEmail" name="email" placeholder="Enter your email" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="doctorPassword" class="form-label">Password</label>
+                                        <label for="doctorPassword" class="form-label">Password <span class="text-danger">*</span></label>
                                         <input type="password" class="form-control" id="doctorPassword" name="password" placeholder="Enter your password" minlength="6" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="doctorCPassword" class="form-label">Confirm Password</label>
+                                        <label for="doctorCPassword" class="form-label">Confirm Password <span class="text-danger">*</span></label>
                                         <input type="password" class="form-control" id="doctorCPassword" name="cpassword" placeholder="Re-enter your password" minlength="6" required>
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="doctorSpecialization" class="form-label">Specialization</label>
+                                        <label for="doctorSpecialization" class="form-label">Specialization <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="doctorSpecialization" name="specialization" placeholder="Enter your specialization" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="doctorContact" class="form-label">Contact Number</label>
+                                        <label for="doctorContact" class="form-label">Contact Number <span class="text-danger">*</span></label>
                                         <input type="tel" class="form-control" id="doctorContact" name="contact" placeholder="Enter your contact number" pattern="\d{10}">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="doctorAvailability" class="form-label">Availability </label>
+                                        <label for="doctorAvailability" class="form-label">Availability <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="doctorAvailability" name="availability" placeholder="Enter your availability">
                                     </div>
                                     <div>
@@ -228,24 +228,24 @@ if (isset($_POST['#'])) {
                             <div class="tab-pane fade" id="pills-admin" role="tabpanel" aria-labelledby="tab-admin">
                                 <form action="#" method="post">
                                     <div class="mb-3">
-                                        <label for="adminName" class="form-label">Full Name</label>
+                                        <label for="adminName" class="form-label">Full Name <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="adminName" name="name" placeholder="Enter admin full name" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="adminEmail" class="form-label">Email</label>
+                                        <label for="adminEmail" class="form-label">Email <span class="text-danger">*</span></label>
                                         <input type="email" class="form-control" id="adminEmail" name="email" placeholder="Enter admin email" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="adminPassword" class="form-label">Password</label>
+                                        <label for="adminPassword" class="form-label">Password <span class="text-danger">*</span></label>
                                         <input type="password" class="form-control" id="adminPassword" name="password" placeholder="Enter admin password" minlength="6" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="adminCPassword" class="form-label">Confirm Password</label>
+                                        <label for="adminCPassword" class="form-label">Confirm Password <span class="text-danger">*</span></label>
                                         <input type="password" class="form-control" id="adminCPassword" name="cpassword" placeholder="Re-enter admin password" minlength="6" required>
                                     </div>
 
                                     <div class="mb-3">
-                                        <label for="Role" class="form-label">Role</label>
+                                        <label for="Role" class="form-label">Role <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" id="role" name="role" value="admin" readonly>
                                     </div>
                                     <div>
